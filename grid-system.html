@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/style.css">
+
+    <title>grid system</title>
+</head>
+
+<body>
+
+    <body>
+        <header class="container ">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-3 my-2">Bootstrap grid system</h1>
+                    <h4 class="text-dark">When to use class prefix: col, col-sm, col-md, col-lg, col-xl</h4>
+                    <p>Resize your browser screen to see resolution. If the resolution is...</p>
+                </div>
+            </div>
+        </header>
+
+        <hr class="my-4">
+
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 grid-1200 text-info">
+                    <h3>equal to or greater then</h3>
+                    <h2 class="display-1">1200px </h2>
+                    <p>use the class</p>
+                    <h3 class="display-4">col-xl</h3>
+                    <p>max container 1140px</p>
+                </div>
+                <div class="col-12 grid-992 text-success">
+                    <h3>equal to or greater then</h3>
+                    <h2 class="display-1">992px </h2>
+                    <p>use the class</p>
+                    <h3 class="display-4">col-lg</h3>
+                    <p>max container 960px</p>
+                </div>
+                <div class="col-12 grid-768 text-primary">
+                    <h3>equal to or greater then</h3>
+                    <h2 class="display-1">768px </h2>
+                    <p>use the class</p>
+                    <h3 class="display-4">col-md</h3>
+                    <p>max container 720px</p>
+                </div>
+                <div class="col-12 grid-576 text-dark">
+                    <h3>equal to or greater then</h3>
+                    <h2 class="display-1">576px </h2>
+                    <p>use the class</p>
+                    <h3 class="display-4">col-sm</h3>
+                    <p>max container 540px</p>
+                </div>
+                <div class="col-12 grid-576menor text-danger">
+                    <h3>less than </h3>
+                    <h2 class="display-1">576px </h2>
+                    <p>use the class</p>
+                    <h3 class="display-4">col</h3>
+                    <p>auto container</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row text-center py-4 rounded-top bg-white colunas">
+                <h4 class="col-12 mb-3 text-dark">practical example</h4>
+
+                <div class="col-12 col-sm col-md-9 col-lg-3 col-xl-6 colunas01">
+                    <div class="rounded text-white py-3 mb-2 mycol1"> </div>
+                </div>
+                <div class="col-12 col-sm-9 col-md-3 col-lg-9 col-xl-6 colunas02">
+                    <div class="rounded text-white py-3 mb-2 mycol2"> </div>
+                </div>
+                <p class="col-12 mt-2">The sides of the column have 15px of padding</p>
+            </div>
+            <div class="row bg-white rounded-bottom mb-5 py-4">
+                <div class="col-12 text-center">
+                    <h4 class="text-dark">The orders of the tags:</h4>
+                    <div class="d-flex justify-content-md-center">
+                        <ul class="text-left mb-0">
+                            <li>
+                                &lt;div class="container"&gt;
+                                <ul>
+                                    <li>
+                                        &lt;div class="row"&gt;
+                                        <ul>
+                                            <li>
+                                                &lt;div class="
+                                                <span class="my-col esquerda">col-12</span>
+                                                <span class="my-sm esquerda">col-sm</span>
+                                                <span class="my-md esquerda">col-md-9</span>
+                                                <span class="my-lg esquerda">col-lg-3</span>
+                                                <span class="my-xl esquerda">col-xl-6</span>
+                                                "&gt;<br />
+                                                <span class="pl-4 text-black-50"> Left column</span><br />
+                                                &lt;/div&gt;<br />
+                                                &lt;div class="
+                                                <span class="my-col direita">col-12</span>
+                                                <span class="my-sm direita">col-sm-9</span>
+                                                <span class="my-md direita">col-md-3</span>
+                                                <span class="my-lg direita">col-lg-9</span>
+                                                <span class="my-xl direita">col-xl-6</span>
+                                                "&gt;<br />
+                                                <span class="pl-4 text-black-50"> Right column</span><br />
+                                                &lt;/div&gt;
+                                            </li>
+                                        </ul>
+                                        &lt;/div&gt;
+                                    </li>
+                                </ul>
+                                &lt;/div&gt;
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid mb-4 py-4 border-top border-bottom bg-white">
+            <div class="row m-0">
+                <div class="col-12 border-0 p-0">
+                    <h4 class="text-dark">Container with full browser width</h4>
+                    <p>For 100% browser width, use the class = container-fluid</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    col-12 ou col
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    col-6
+                </div>
+                <div class="col-6">
+                    col-6
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    col-4
+                </div>
+                <div class="col-4">
+                    col-4
+                </div>
+                <div class="col-4">
+                    col-4
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    col-3
+                </div>
+                <div class="col-3">
+                    col-3
+                </div>
+                <div class="col-3">
+                    col-3
+                </div>
+                <div class="col-3">
+                    col-3
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    col-2
+                </div>
+                <div class="col-2">
+                    col-2
+                </div>
+                <div class="col-2">
+                    col-2
+                </div>
+                <div class="col-2">
+                    col-2
+                </div>
+                <div class="col-2">
+                    col-2
+                </div>
+                <div class="col-2">
+                    col-2
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-7">col-7</div>
+                <div class="col-5">col-5</div>
+            </div>
+            <div class="row">
+                <div class="col-8">col-8</div>
+                <div class="col-4">col-4</div>
+            </div>
+            <div class="row">
+                <div class="col-9">col-9</div>
+                <div class="col-3">col-3</div>
+            </div>
+            <div class="row">
+                <div class="col-10">col-10</div>
+                <div class="col-2">col-2</div>
+            </div>
+        </div>
+
+        <footer class="container-fluid">
+            <p class="text-center rounded p-3 my-4">
+                <a href="https://getbootstrap.com/docs/4.3/layout/grid/#grid-options" target="_blank" rel="noopener"
+                    class="text-white">
+                    More details on Bootstrap Grid <i class="fas fa-external-link-alt"></i>
+                </a>
+            </p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

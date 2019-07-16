@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700|Lobster&display=swap');
+/*MY MEDIA QUERY */
+//Responsive breakpoints
+$m575: 575.98px;
+$m576: 576px;
+$m767: 767.98px;
+$m768: 768px;
+$m991: 991.98px;
+$m992: 992px;
+$m1199: 1199.98px;
+$m1200: 1200px;
+
+@mixin media($medias...) {
+    @each $media in $medias {
+
+        //ACREEN SIZES USING OR LARGER SCREEN SIZE
+        @if $media==sm-up {
+            @media (min-width: $m576) {
+                @content;
+            }
+        }
+
+        @if $media==md-up {
+            @media (min-width: $m768) {
+                @content;
+            }
+        }
+
+        @if $media==lg-up {
+            @media (min-width: $m992) {
+                @content;
+            }
+        }
+
+        @if $media==xl-up {
+            @media (min-width: $m1200) {
+                @content;
+            }
+        }
+
+        //ACREEN SIZES USING OR LESS SCREEN SIZE
+        @if $media==xs-down {
+            @media (max-width: $m575) {
+                @content;
+            }
+        }
+
+        @if $media==sm-down {
+            @media (max-width: $m767) {
+                @content;
+            }
+        }
+
+        @if $media==md-down {
+            @media (max-width: $m991) {
+                @content;
+            }
+        }
+
+        @if $media==lg-down {
+            @media (max-width: $m1199) {
+                @content;
+            }
+        }
+
+        //ACREEN SIZES USING OR MINIMUM AND MAXIMUM BREAKPOINT WIDTHS
+        @if $media==sm {
+            @media (min-width: $m576) and (max-width: $m767) {
+                @content;
+            }
+        }
+
+        @if $media==md {
+            @media (min-width: $m768) and (max-width: $m991) {
+                @content;
+            }
+        }
+
+        @if $media==lg {
+            @media (min-width: $m992) and (max-width: $m1199) {
+                @content;
+            }
+        }
+    }
+}
+
+/*END MY MEDIA QUERY */
+
+body {
+    font-family: 'Comfortaa', cursive;
+    color: #6c757d;
+    background-color: #f4f4f4;
+}
+
+h1,
+h2 {
+    font-family: 'Lobster', cursive;
+}
+
+ul {
+    list-style-type: none;
+
+    @include media(sm) {
+        padding-left: 0px;
+    }
+}
+
+p {
+    margin: 0px;
+}
+
+header h1 {
+    color: #563d7c;
+
+    @include media(md) {
+        font-size: 3.3rem !important;
+    }
+
+    @include media(sm) {
+        font-size: 2.7rem !important;
+    }
+}
+
+footer p {
+    background-color: #563d7c;
+}
+
+.colunas {
+    border: 1px solid;
+}
+
+.container-fluid .row {
+    margin: 15px 0px;
+}
+
+.container-fluid [class*="col"] {
+    text-align: center;
+    border: solid 1px #999;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+[class*="grid-"] {
+    display: none;
+}
+
+[class*="my-"] {
+    &.atual {
+        font-weight: bold;
+    }
+}
+
+.my-col {
+    &.atual {
+        color: #DC3545;
+}
+}
+
+.my-sm {
+    &.atual {
+        color: #343A40;
+    }
+}
+
+.my-md {
+    &.atual {
+        color: #007BFF;
+    }
+}
+
+.my-lg {
+    &.atual {
+        color: #28A745;
+    }
+}
+
+.my-xl {
+    &.atual {
+        color: #17A2B8;
+    }
+}
+
+.grid-1200 {
+    @include media(xl-up) {
+        display: block;
+    }
+}
+
+.grid-992 {
+    @include media(lg) {
+        display: block;
+    }
+}
+
+.grid-768 {
+    @include media(md) {
+        display: block;
+    }
+}
+
+.grid-576 {
+    @include media(sm) {
+        display: block;
+    }
+}
+
+.grid-576menor {
+    @include media(xs-down) {
+        display: block;
+    }
+}
